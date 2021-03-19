@@ -1,0 +1,328 @@
+/*-----------------------------------------------------*/
+
+/* Los rem son mejores para crear sitios resposive para todo tipo de dispostivos */
+/* Para poder utilizar los rem en igual escala a los px, se utiliza el siguiente hack */
+/* 1 rem = 10px */
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-snap-type: y mandatory;
+}
+
+body{
+    font-size: 16px;
+    font-family: 'Krub', sans-serif;
+    background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100%);
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+/*-----------------------------------------------------*/
+
+/* Variables con CSS */
+/* Con esto definimos variables de CSS para utilizarlas */
+:root {
+    /* Variables de Colores */
+    --blanco: #FFFFFF;
+    --oscuro: #212121;
+    --primario: #FFC107;
+    --secundario: #0097A7;
+    --gris: #757575;
+    --grisClaro: #DFE9F3;
+
+    /* Variables de tamanio de fuente */
+    --fuente-principal: 3.8rem;
+}
+/* Varaibles con CSS */
+
+h1{
+    font-size: var(--fuente-principal);
+    color: var(--oscuro);
+    font-weight: 400;
+}
+
+h2{
+    font-size: 2.8rem;
+    color: var(--oscuro);
+}
+
+h3{
+    font-size: 1.8rem;
+}
+
+
+.titulo{
+    text-align: center;
+    /*font-size: 3.8rem; --> De esta manera es manual*/
+    /*font-size: var(--fuente-principal); /* De esta manera utilizo la variable de CSS */
+    /* color: var(--oscuro); /* Aca se ve como se utiliza la variable de CSS definida arriba de todo */
+    /*font-weight: 400; /* Aca utilizo la de 400, que es la que seleccione en Google Fonts */
+}
+
+
+
+.titulo span{
+    font-size: 2.6rem;
+    font-weight: 700; /* Aca utilizo la de 700, que es la que elegi en Google Fonts */
+    /*color: cornflowerblue;*/
+}
+
+.boton{
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    text-decoration: none;
+    margin-top: 2rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+    border: none;
+}
+
+.boton:hover{
+    cursor: pointer;
+}
+
+/* Utilidades */
+.w-100{
+    width: 100%;
+}
+@media (min-width: 768px) { 
+    .w-100{
+        width: auto;
+    }
+ }
+
+.flex{
+    display: flex;
+}
+
+.alinear-derecha{
+    justify-content: flex-end;
+}
+
+@media (min-width: 768px) { 
+    .boton{
+        width: auto;
+    }
+ }
+
+.contenedor{
+    max-width: 120rem;
+    /* Opcion 1: colocando cada valor individual */
+    /*  margin-top: 0;
+        margin-right: auto;
+        margin-bottom: 0;
+        margin-left: auto;
+    */
+
+    /* Opcion 2: coloco toda la informacion en un solo margin, tenindo en cuenta el sentido horario 12, 3, 6, 9 */
+    margin: 0 auto 0 auto;
+}
+
+.contenedor-main{
+    margin: 0 auto 0 auto;
+    align-items: center;
+    max-width: 80rem;
+}
+
+.nav-background{
+    background-color: var(--secundario);
+}
+
+.navegacion-principal{
+    display: flex;
+    flex-direction: column;
+   
+}
+
+/* Para los media querie:
+- 480px es para tamanio de celular
+- 768px es para una tablet
+- 1140px es para una laptop
+- 1400px es para una television
+*/
+
+@media (min-width: 768px) {
+    .navegacion-principal{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+ }
+
+
+.navegacion-principal a{
+   display: block;
+   text-align: center;
+   padding: 1rem;
+   color: var(--blanco);
+   text-decoration: none; /* Elimina el subrayado del enlace */
+   font-size: 2rem;
+   font-weight: 700;
+}
+
+
+
+/* Para lograr el efecto esperado cuando el cursor se posiciona sobre alguno de los enlaces realizo lo siguente */
+.navegacion-principal a:hover{
+    background-color: var(--primario);
+    color: var(--oscuro);
+}
+
+.hero{
+    background-image: url(../Imagenes/image3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    position: relative; /* El padre siempre debe tener posicion relativa */
+    margin-bottom: 2rem;
+}
+
+.contenido-hero{
+    position: absolute;
+    background-color: rgba(0, 0, 0, .45); /* Asi puedo jugar con la transparencia */
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenido-hero h2, .contenido-hero p{
+    color: var(--blanco);
+}
+
+.ubicacion p{
+    display: flex;
+    align-items: flex-end;
+}
+
+.contenedor-main{
+    max-width: 100rem;
+    margin: 0 auto 0 auto;
+}
+
+.servicios{
+    text-align: center;
+}
+
+.sombra{
+    -webkit-box-shadow: 0px 5px 14px 1px rgba(0,0,0,0.39);
+    -moz-box-shadow: 0px 5px 14px 1px rgba(0,0,0,0.39);
+    box-shadow: 0px 5px 14px 1px rgba(0,0,0,0.39);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+
+
+@media (min-width: 768px) { 
+    .udemy{
+        display: grid;
+        /*grid-template-columns: 1fr 1fr 1fr; /* Como divido en 3, cada columna toma 1 fraccion. es lo mismo que poner 3 veces 33.3%*/
+        grid-template-columns: repeat(3, 1fr); /* Asi es mas limpio y rapido */
+        column-gap: 2rem;
+    }
+ }
+
+ .servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+
+.servicio p {
+    line-height: 2;
+    text-align: center;
+
+}
+
+.servicio .iconos{
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--primario);
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.servicio h3{
+    color: var(--secundario);
+    font-weight: 400;
+}
+
+/* Formulario */
+
+.contacto {
+
+}
+
+.contacto h2{
+    text-align: center;
+}
+
+.formulario {
+    background-color: var(--gris);
+    width: min( 60rem, 100% ); /* Utiliza el valor mas pequeno */
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+.formulario fieldset{
+    border: none;
+}
+
+.formulario legend{
+    text-align: center;
+    color: var(--primario);
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.contenedor-campos{
+
+}
+
+.campo{
+    margin: 1rem;
+
+}
+
+.campo label{
+    color: var(--blanco);
+    font-weight: 700;
+    margin-bottom: .5rem;
+    display: block;
+}
+
+.input-text{
+    width: 100%;
+    border: none;
+    padding: 1rem;
+    border-radius: .5rem;
+}
+
+.enviar .boton{
+    width: 100%;
+}
+
+.campo textarea{
+    height: 20rem;
+}
+
+.final{
+    text-align: center;
+    padding: 2rem;
+}
