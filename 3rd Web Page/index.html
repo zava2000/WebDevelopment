@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BlogDeCafe</title>
+        <meta name="description" content="Pagina web de Blog de Cafe">
+
+        <!--Prefech-->
+        <link rel="prefetch" href="nosotros.html" as="document">
+
+        <link rel="preload" href="CSS/Normalize.css" as="style">
+        <link rel="stylesheet" href="CSS/Normalize.css">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" as="font">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+        <link rel="preload" href="CSS/style.css" as="style">
+        <link rel="stylesheet" href="CSS/style.css">
+
+        <link rel="preload" href="CSS/blog1.jpg" as="image">
+        <link rel="preload" href="CSS/blog2.jpg" as="image">
+        <link rel="preload" href="CSS/blog3.jpg" as="image">
+
+    </head>
+    <body>
+        <header class="header">
+
+            <div class="contenedor">
+                <div class="barra">
+                    <a class="logo" href="index.html">
+                        <h1 class="logo__nombre no-margin centrar-texto">Blog <span class="logo__bold">De Cafe</span></h1>
+                    </a>
+
+                    <nav class="navegacion">
+                        <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
+                        <a href="cursos.html" class="navegacion__enlace">Cursos</a>
+                        <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="header__texto">
+                <h2 class="no-margin">
+                    Blog de Cafe con consejos y cursos
+                </h2>
+                <p class="no-margin">
+                    Aprende de los expertos con las mejores recetas y consejos
+                </p>
+            </div>
+        </header>
+
+        <div class="contenedor contenido-principal">
+            <main class="blog">
+                <h3>Nuestro Blog</h3>
+
+                <article class="entrada">
+                    <div class="entrada__imagen">
+                        <!--
+                            <picture>
+                            <source srcset="CSS/blog3.webp" type="image/webp">
+                            </picture>
+                        -->
+                        <img loading="lazy" src="CSS/blog1.jpg" alt="imagen blog">
+
+                        <div class="entrada__contenido no-margin">
+                            <h4>Tipos de Granos de Cafe</h4>
+                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. 
+                                If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. </p>
+                            <a href="entrada1.html" class="boton boton--primario">Leer entrada</a>                                
+                        </div>
+                    </div>
+                </article>
+
+                <article class="entrada">
+                    <div class="entrada__imagen">
+                        <img loading="lazy" src="CSS/blog2.jpg" alt="imagen blog">
+
+                        <div class="entrada__contenido no-margin">
+                            <h4>3 deliciosas recetas de Cafe</h4>
+                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. 
+                                If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. </p>
+                            <a href="entrada2.html" class="boton boton--primario">Leer entrada</a>                                
+                        </div>
+                    </div>
+                </article>
+
+                <article class="entrada">
+                    <div class="entrada__imagen">
+                        <img loading="lazy" src="CSS/blog3.jpg" alt="imagen blog">
+
+                        <div class="entrada__contenido no-margin">
+                            <h4>Beneficios del Cafe</h4>
+                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. 
+                                If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. </p>
+                            <a href="entrada3.html" class="boton boton--primario">Leer entrada</a>                                
+                        </div>
+                    </div>
+                </article>
+            </main>
+            <aside class="sidebar">
+                <h3>Nuestros cursos y talleres</h3>
+                <ul class="cursos no-padding"> 
+                    <li class="widget-curso">
+                        <h4 class="no-margin">Tecnicas de extraccion de Cafe</h4>
+                        <p class="widget-curso__label">Precio: <span class="widget-curso__info">Gratis</span></p>
+                        <p class="widget-curso__label">Cupo: <span class="widget-curso__info">20</span></p>
+                        <a href="entrada.html" class="boton boton--secundario">Mas informacion Sobre Nuestros Cursos</a>
+                    </li>
+
+                    <li class="widget-curso">
+                        <h4 class="no-margin">Cuatro recetas de Cafe para principiantes</h4>
+                        <p class="widget-curso__label">Precio: <span class="widget-curso__info">Gratis</span></p>
+                        <p class="widget-curso__label">Cupo: <span class="widget-curso__info">20</span></p>
+                        <a href="entrada.html" class="boton boton--secundario">Mas informacion Sobre Nuestros Cursos</a>
+                    </li>
+                </ul>
+            </aside>
+        </div>
+        
+        <footer class="footer">
+            <div class="contenedor">
+                <div class="barra">
+                        <h1 class="logo__nombre no-margin centrar-texto">Blog <span class="logo__bold">De Cafe</span></h1>
+
+                    <nav class="navegacion">
+                        <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
+                        <a href="cursos.html" class="navegacion__enlace">Cursos</a>
+                        <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+                    </nav>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
